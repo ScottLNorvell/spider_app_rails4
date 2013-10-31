@@ -8,6 +8,7 @@ gem 'pg'
 gem 'faker'
 
 gem 'httparty'
+gem 'pry'
 
 gem 'rails_12factor', group: :production
 
