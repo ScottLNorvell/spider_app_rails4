@@ -13,7 +13,7 @@ class SpidersController < ApplicationController
 	end
 
 	def create
-		Spider.create params[:spider]
+		Spider.create spider_params
 	end
 
 	def edit
@@ -22,13 +22,18 @@ class SpidersController < ApplicationController
 
 	def update
 		spider = Spider.find params[:id]
-		spider.update_attributes params[:spider]
+		spider.update_attributes spider_params
 		redirect_to spiders_path
 	end
 
 	def destroy
-		spider = Spider.find params[:spider]
+		spider = Spider.find params[:id]
 		spider.destroy
 	end
+
+	private 
+		def spider_params
+      params.require(:spider).permit(:name, :size)
+    end
 
 end

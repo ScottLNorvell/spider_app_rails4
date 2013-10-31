@@ -13,7 +13,7 @@ class FliesController < ApplicationController
 	end
 
 	def create
-		Fly.create params[:fly]
+		Fly.create fly_params
 	end
 
 	def edit
@@ -22,13 +22,18 @@ class FliesController < ApplicationController
 
 	def update
 		fly = Fly.find params[:id]
-		fly.update_attributes params[:fly]
+		fly.update_attributes fly_params
 		redirect_to flies_path
 	end
 
 	def destroy
-		fly = Fly.find params[:fly]
+		fly = Fly.find params[:id]
 		fly.destroy
 	end
+
+	private 
+		def fly_params
+      params.require(:fly).permit(:name, :trapped)
+    end
 	
 end

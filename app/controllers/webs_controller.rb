@@ -13,7 +13,7 @@ class WebsController < ApplicationController
 	end
 
 	def create
-		Web.create params[:web]
+		Web.create web_params
 	end
 
 	def edit
@@ -22,13 +22,18 @@ class WebsController < ApplicationController
 
 	def update
 		web = Web.find params[:id]
-		web.update_attributes params[:web]
+		web.update_attributes web_params
 		redirect_to webs_path
 	end
 
 	def destroy
-		web = Web.find params[:web]
+		web = Web.find params[:id]
 		web.destroy
 	end
+
+	private 
+		def web_params
+      params.require(:web).permit(:name, :size)
+    end
 	
 end
