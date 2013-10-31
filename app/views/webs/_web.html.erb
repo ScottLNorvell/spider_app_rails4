@@ -7,3 +7,8 @@
 <% else %>
 
 <% end %>
+
+<small>
+<%= link_to "[delete]", web_path(web), method: :delete %>
+<%= link_to "[edit]", edit_web_path(web) %>
+</small>

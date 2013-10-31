@@ -4,3 +4,8 @@
 	<li>Number of Legs: <%= spider.legs %></li>
 	<li>Color: <%= spider.color %></li>
 </ul>
+
+<small>
+<%= link_to "[delete]", spider_path(spider), method: :delete %>
+<%= link_to "[edit]", edit_spider_path(spider) %>
+</small>

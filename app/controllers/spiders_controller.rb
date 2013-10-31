@@ -29,6 +29,7 @@ class SpidersController < ApplicationController
 	def destroy
 		spider = Spider.find params[:id]
 		spider.destroy
+		redirect_to spiders_path
 	end
 
 	private 

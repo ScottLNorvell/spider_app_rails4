@@ -29,6 +29,7 @@ class WebsController < ApplicationController
 	def destroy
 		web = Web.find params[:id]
 		web.destroy
+		redirect_to webs_path
 	end
 
 	private 

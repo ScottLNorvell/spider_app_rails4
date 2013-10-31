@@ -29,6 +29,8 @@ class FliesController < ApplicationController
 	def destroy
 		fly = Fly.find params[:id]
 		fly.destroy
+		redirect_to flies_path
+		
 	end
 
 	private 

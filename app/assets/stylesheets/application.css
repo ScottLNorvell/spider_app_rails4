@@ -11,3 +11,27 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+	background: url('http://images2.layoutsparks.com/1/156970/spider-web-trap-black.jpg');
+	font-family: 'helvetica';
+	color: yellow;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	width: 50%;
+	background-color: black;
+	padding: 20px;
+	overflow: scroll;
+}
+
+a {
+	color: yellow;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
