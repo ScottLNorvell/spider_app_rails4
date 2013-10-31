@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<%= link_to 'Sweet Webs', webs_path %>
+	|
+	<%= link_to 'Sweet Spiders', spiders_path %>
+	|
+	<%= link_to 'Sweet Flies', flies_path %>
+	|
+	<%= link_to 'HOME', root_path %>
 
+	<div class="container">
 <%= yield %>
-
+	</div>
 </body>
 </html>

@@ -1,0 +1,10 @@
+<%= form_for @spider do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.hidden_field :legs, value: 8 %>
+<%= f.label :color %>
+<%= f.text_field :color %>
+<%= f.submit %>
+
+<% end %>
